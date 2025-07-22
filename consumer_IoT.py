@@ -22,21 +22,20 @@ consumer = KafkaConsumer(
     value_deserializer=lambda x: json.loads(x.decode('utf-8'))
 )
 
-def database_connection():
-    try:
-        # Connect to PostgreSQL database
-        conn = psycopg2.connect(
-            host=POSTGRES_HOST,
-            database=POSTGRES_DB,
-            user=POSTGRES_USER,
-            password=POSTGRES_PASSWORD
-        )
-        # Create a cursor object
-        cur = conn.cursor()
-        print("Connected to PostgreSQL database successfully.")
-    except Exception as e:  
-        print(f"Error connecting to PostgreSQL database: {e}")
-        exit()
+try:
+    # Connect to PostgreSQL database
+    conn = psycopg2.connect(
+        host=POSTGRES_HOST,
+        database=POSTGRES_DB,
+        user=POSTGRES_USER,
+        password=POSTGRES_PASSWORD
+    )
+    # Create a cursor object
+    cur = conn.cursor()
+    print("Connected to PostgreSQL database successfully.")
+except Exception as e:  
+    print(f"Error connecting to PostgreSQL database: {e}")
+    exit()
 
 def message_processing():
     try:
@@ -68,7 +67,6 @@ def message_processing():
 
 # Main function to run the consumer
 def run_consumer():
-    database_connection()
     print("Kafka Consumer initialized. Listening for messages...")
     message_processing()
 
