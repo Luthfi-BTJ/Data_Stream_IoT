@@ -19,4 +19,4 @@ There are two ways to run the program (all of them could be run on Terminal):
      - Run "python producer_IoT.py" to produce dummy data.
      - Run "python consumer_IoT.py" for message processing.
   2. Run all the program:
-     Run "python main.py"
+     - Run "python main.py"
