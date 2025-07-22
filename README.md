@@ -14,6 +14,11 @@ Simple project to simulate IoT sensor data for Apache Kafka and storing proccess
 
 ## How to run the program
 Before running the program, make sure your Apache Kafka and PostgreSQL running.
+
+Install dependencies in your python by run:
+`bash
+pip install -r requirements.txt
+
 There are two ways to run the program (all of them could be run on Terminal):
   1. Run the program separately:
      - Run "python producer_IoT.py" to produce dummy data.
