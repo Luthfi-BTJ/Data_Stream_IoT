@@ -1,5 +1,5 @@
 # Data_Stream_IoT
-Simple project to simulate IoT sensor data for Apache Kafka and storing proccessed data into PostgreSQL
+Simple project to simulate IoT sensor data for **Apache Kafka** and storing proccessed data into **PostgreSQL**.
 
 ## Requirements
 - Python 3.8+
@@ -16,13 +16,22 @@ Simple project to simulate IoT sensor data for Apache Kafka and storing proccess
 Before running the program, make sure your Apache Kafka and PostgreSQL running.
 
 Install dependencies in your python by run:
-`bash
+```bash
 pip install -r requirements.txt
-
+```
 There are two ways to run the program (all of them could be run on Terminal):
   1. Run the program separately:
-     - Run "python producer_IoT.py" to produce dummy data.
-     - Run "python consumer_IoT.py" for message processing.
+     - Run **producer_IoT.py** to produce dummy data.
+       ```bash
+       python producer_IoT.py
+       ```
+     - Run **consumer_IoT.py** for message processing.
+       ```bash
+       python consumer_IoT.py
+       ```
 
   2. Run all the program:
-     - Run "python main.py"
+     - Run **main.py**
+       ```bash
+       python main.py
+       ```
